@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+  <!-- Highly simplified, stylized polygon representing Ohio for background effect -->
+  <g>
+    <path d="M 150 150 L 800 150 L 950 500 L 750 900 L 250 850 L 50 550 Z" stroke-linejoin="round" />
+    <path d="M 300 150 L 350 400 L 250 850" />
+    <path d="M 500 150 L 450 500 L 550 870" />
+    <path d="M 700 150 L 600 450 L 750 900" />
+    <path d="M 50 550 L 350 400 L 950 500" />
+    <path d="M 150 300 L 400 350 L 850 300" />
+    <path d="M 100 700 L 500 600 L 850 700" />
+  </g>
+</svg>

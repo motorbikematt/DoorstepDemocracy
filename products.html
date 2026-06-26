@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Doorstep Democracy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-products">
+  <div id="bg-map-container"></div>
+
+  <header>
+    <nav>
+      <a href="index.html" class="brand">The Doorstep Democracy Benefit Company</a>
+      <div class="nav-links">
+        <a href="index.html">Overview</a>
+        <a href="flywheel.html">The Flywheel</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="about.html">Team</a>
+        <button id="theme-toggle" class="theme-toggle">
+          <span id="theme-icon">☀️</span>
+          <span id="theme-text">Light Mode</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Our Portfolio</h1>
+      <p>We build tools that displace expensive legacy systems while drastically improving on-the-ground performance.</p>
+    </section>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+      <section class="card">
+        <h2>Precincts.info</h2>
+        <p>A B2B SaaS platform for Democratic county parties and precinct captains. Designed as a direct replacement for NGP VAN.</p>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-secondary);">
+          <li>Data Fusion Layer (Live)</li>
+          <li>AI Captain Briefings (Live)</li>
+          <li>Spatial Routing (Prototype)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>ProtoDemSite</h2>
+        <p>Our pilot accountability engine and infrastructure platform rolling out in Montgomery County, Ohio.</p>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-secondary);">
+          <li>Local-State-Federal Document Ingestion</li>
+          <li>Captain Directory & Management</li>
+          <li>Meeting Transcripts & Sentiment Tracking</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 The Doorstep Democracy Benefit Company.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
