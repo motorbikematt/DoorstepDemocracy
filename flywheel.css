@@ -1,0 +1,212 @@
+/* Flywheel Scrollytelling Specific Styles */
+
+.flywheel-scrollytelling {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* The sticky left side containing the SVG */
+.sticky-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--nav-h, 80px);
+}
+
+.graphic-wrapper {
+  width: 90%;
+  max-width: 800px;
+}
+
+/* SVG Styling */
+.flywheel-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.flywheel-svg .svg-element {
+  opacity: 0.15; /* Dim default state */
+  transition: opacity 0.6s ease, filter 0.6s ease;
+}
+
+.flywheel-svg .svg-element.active {
+  opacity: 1;
+}
+
+/* Loop Paths */
+.loop-path path {
+  fill: none;
+  stroke: var(--text-secondary);
+  stroke-width: 8;
+  stroke-dasharray: 20, 10;
+  animation: scroll-dash 40s linear infinite;
+}
+
+@keyframes scroll-dash {
+  to { stroke-dashoffset: -1000; }
+}
+
+.svg-loop-label {
+  fill: var(--text-primary);
+  font-family: var(--font-display, 'Playfair Display');
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}
+
+#svg-loop-left.active .svg-loop-label { fill: var(--accent-blue); opacity: 1; }
+#svg-loop-right.active .svg-loop-label { fill: var(--accent-amber); opacity: 1; }
+
+#svg-loop-left.active path { stroke: var(--accent-blue); filter: drop-shadow(0 0 8px var(--accent-blue)); }
+#svg-loop-right.active path { stroke: var(--accent-amber); filter: drop-shadow(0 0 8px var(--accent-amber)); }
+
+/* Bedrock */
+#svg-bedrock rect {
+  fill: var(--surface-glass);
+  stroke: var(--accent-gold);
+  stroke-width: 3;
+}
+
+#svg-bedrock.active rect {
+  fill: url(#grad-bedrock);
+  stroke: none;
+  filter: drop-shadow(0 0 15px rgba(201, 168, 76, 0.4));
+}
+
+#svg-bedrock .svg-label {
+  fill: var(--accent-gold);
+  font-family: var(--font-sans, 'Inter');
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+#svg-bedrock.active .svg-label {
+  fill: #0b0e14; /* Dark text for contrast when active */
+}
+
+#svg-bedrock .connector {
+  fill: none;
+  stroke: var(--accent-gold);
+  stroke-width: 4;
+  stroke-dasharray: 5, 5;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+#svg-bedrock.active .connector {
+  opacity: 1;
+}
+
+/* Nodes */
+.svg-node {
+  fill: var(--bg-color);
+  stroke: var(--text-secondary);
+  stroke-width: 4;
+  opacity: 0.2;
+  transition: all 0.4s ease;
+}
+
+.svg-node.active {
+  opacity: 1;
+  fill: var(--text-primary);
+  transform: scale(1.3);
+  transform-origin: center;
+}
+
+#node-1.active, #node-2.active { stroke: var(--accent-blue); box-shadow: 0 0 10px var(--accent-blue); }
+#node-3.active, #node-4.active { stroke: var(--accent-amber); }
+
+/* The right side scrolling text steps */
+.scroll-steps {
+  width: 45%;
+  padding: 0 5% 0 2%;
+  position: relative;
+}
+
+.step-placeholder {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.intro-title h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+.intro-title p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+}
+
+.step {
+  height: 100vh; /* each step takes up full viewport height to pace the scroll */
+  display: flex;
+  align-items: center;
+}
+
+.step-content {
+  background: var(--surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.5rem;
+  opacity: 0.3; /* inactive state */
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.3s;
+}
+
+.step.is-active .step-content {
+  opacity: 1;
+  transform: translateY(0);
+  border-color: var(--accent-gold);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.step-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.step-content p {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Mobile Fallback: stack vertically */
+@media (max-width: 900px) {
+  .flywheel-scrollytelling {
+    flex-direction: column;
+  }
+  .sticky-container {
+    width: 100%;
+    height: 50vh;
+    padding-top: 2rem;
+    position: sticky;
+    top: var(--nav-h, 80px);
+    z-index: 10;
+  }
+  .scroll-steps {
+    width: 100%;
+    padding: 0 1rem;
+    z-index: 20;
+  }
+  .step {
+    height: auto;
+    min-height: 60vh;
+    padding: 2rem 0;
+  }
+}

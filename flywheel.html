@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="flywheel.css">
 </head>
 <body class="page-flywheel">
   <div id="bg-map-container"></div>
@@ -28,32 +29,108 @@
     </nav>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <h1>The Dual Flywheel Architecture</h1>
-      <p>A compounding data asset powered by proprietary ground-level intelligence.</p>
-    </section>
+  <main class="flywheel-scrollytelling">
+    
+    <!-- Sticky Graphic (Infinity Loop + Bedrock) -->
+    <div class="sticky-container">
+      <div class="graphic-wrapper">
+        <svg viewBox="0 0 800 500" class="flywheel-svg" id="flywheel-graphic">
+          <!-- Definitions for gradients -->
+          <defs>
+            <linearGradient id="grad-bedrock" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="var(--accent-blue)" />
+              <stop offset="100%" stop-color="var(--accent-gold)" />
+            </linearGradient>
+          </defs>
 
-    <section class="card" style="text-align: center; padding: 4rem;">
-      <h2 style="color: var(--accent-blue);">1. The Engagement Flywheel</h2>
-      <p><strong>Compounds Canvasser Effectiveness:</strong> Prepared Canvassers (Briefed and Routed) &rarr; Confident Door-Knocks &rarr; Allies and Insights Found.</p>
-    </section>
+          <!-- The Bedrock (Field Notes Database) -->
+          <g id="svg-bedrock" class="svg-element">
+            <rect x="150" y="380" width="500" height="60" rx="12" />
+            <text x="400" y="415" text-anchor="middle" dominant-baseline="middle" class="svg-label">THE FIELD NOTES DATABASE</text>
+            <!-- Connecting beams to loops -->
+            <path d="M 275 380 L 275 330" class="connector" />
+            <path d="M 525 380 L 525 330" class="connector" />
+          </g>
 
-    <section class="card" style="text-align: center; padding: 4rem; border-color: var(--accent-gold);">
-      <h2 style="color: var(--accent-gold);">The Moat: Field Notes Database</h2>
-      <p>The central hub connecting the loops. Every door knock teaches the system, feeding ground truth back to the models.</p>
-    </section>
+          <!-- Left Loop (Engagement) -->
+          <g id="svg-loop-left" class="svg-element loop-path">
+            <path d="M 400 220 C 400 50, 100 50, 100 220 C 100 390, 400 390, 400 220 Z" />
+            <text x="250" y="220" text-anchor="middle" class="svg-loop-label">ENGAGEMENT</text>
+          </g>
 
-    <section class="card" style="text-align: center; padding: 4rem;">
-      <h2 style="color: var(--accent-amber);">2. The Training Flywheel</h2>
-      <p><strong>Compounds Model Usefulness:</strong> Model Recalibrates &rarr; Sharper Briefings Generated &rarr; Canvassers Trust the AI.</p>
-    </section>
+          <!-- Right Loop (Training) -->
+          <g id="svg-loop-right" class="svg-element loop-path">
+            <path d="M 400 220 C 400 50, 700 50, 700 220 C 700 390, 400 390, 400 220 Z" />
+            <text x="550" y="220" text-anchor="middle" class="svg-loop-label">TRAINING</text>
+          </g>
+          
+          <!-- Nodes -->
+          <circle id="node-1" class="svg-node" cx="170" cy="110" r="12" />
+          <circle id="node-2" class="svg-node" cx="170" cy="330" r="12" />
+          <circle id="node-3" class="svg-node" cx="630" cy="330" r="12" />
+          <circle id="node-4" class="svg-node" cx="630" cy="110" r="12" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Scrolling Text Steps -->
+    <div class="scroll-steps">
+      <div class="step-placeholder">
+        <!-- Spacer to allow scrolling before the first step -->
+        <div class="intro-title">
+          <h1>The Dual Flywheel</h1>
+          <p>Scroll to see how human connection drives our civic infrastructure.</p>
+        </div>
+      </div>
+
+      <div class="step" data-step="1">
+        <div class="step-content">
+          <h2>1. The Blank Page Problem</h2>
+          <p>Organizing starts with friction. Volunteers are isolated, staring at a blank page or generic national talking points. Knocking on a stranger's door feels intimidating.</p>
+        </div>
+      </div>
+
+      <div class="step" data-step="2">
+        <div class="step-content">
+          <h2 style="color: var(--accent-blue);">2. Prepared Canvassers</h2>
+          <p>Our localized AI briefings and intelligent routing provide immediate context. Volunteers know exactly what their neighbors care about, lowering the barrier to entry.</p>
+        </div>
+      </div>
+
+      <div class="step" data-step="3">
+        <div class="step-content">
+          <h2 style="color: var(--accent-blue);">3. Confident Door-Knocks</h2>
+          <p>Equipped with relevant insights, timid lit-droppers become confident conversationalists. Real, empathetic human connection occurs at the doorstep.</p>
+        </div>
+      </div>
+
+      <div class="step" data-step="4">
+        <div class="step-content">
+          <h2 style="color: var(--accent-gold);">4. The Field Notes Bedrock</h2>
+          <p>Insights from these conversations flow down into our central hub—the Field Notes Database. Every piece of local knowledge is captured and synthesized, forming the foundational bedrock of the community's intelligence.</p>
+        </div>
+      </div>
+
+      <div class="step" data-step="5">
+        <div class="step-content">
+          <h2 style="color: var(--accent-amber);">5. The Model Recalibrates</h2>
+          <p>As field notes pour into the bedrock, the Training Flywheel begins to spin. The AI models ingest the community's specific feedback, learning the local vernacular and priorities.</p>
+        </div>
+      </div>
+
+      <div class="step" data-step="6">
+        <div class="step-content">
+          <h2 style="color: var(--accent-amber);">6. Sharper Briefings & Compounding Trust</h2>
+          <p>The system generates even sharper, hyper-local briefings. Volunteers experience the AI's verifiable accuracy, boosting their trust. They canvass more often, creating an infinite loop of community empowerment.</p>
+        </div>
+      </div>
+      
+      <!-- Spacer at the bottom to allow the last step to scroll past -->
+      <div class="step-placeholder"></div>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2026 The Doorstep Democracy Benefit Company.</p>
-  </footer>
-
   <script src="script.js"></script>
+  <script src="flywheel.js"></script>
 </body>
 </html>
