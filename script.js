@@ -1,3 +1,5 @@
+const SCRIPT_URL = document.currentScript.src;
+
 document.addEventListener('DOMContentLoaded', () => {
   // Theme Toggle Logic
   const themeToggle = document.getElementById('theme-toggle');
@@ -35,8 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load and inject the Ohio background map SVG
   const mapContainer = document.getElementById('bg-map-container');
   if (mapContainer) {
-    fetch('ohio-bg.svg')
-      .then(response => response.text())
+    const svgUrl = new URL('ohio-bg.svg', SCRIPT_URL).href;
+    fetch(svgUrl)
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        const contentType = response.headers.get('content-type');
+        if (contentType && contentType.includes('text/html')) throw new Error('Received HTML instead of SVG');
+        return response.text();
+      })
       .then(svgData => {
         mapContainer.innerHTML = svgData;
       })
