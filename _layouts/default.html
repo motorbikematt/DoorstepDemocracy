@@ -14,22 +14,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 </head>
 <body class="page-blog">
   <div id="bg-map-container"></div>
 
   <header>
     <nav>
-      <a href="/index.html" class="brand">The Doorstep Democracy Benefit Company</a>
+      <a href="{{ '/index.html' | relative_url }}" class="brand">The Doorstep Democracy Benefit Company</a>
       <div class="nav-links">
-        <a href="/index.html">Overview</a>
-        <a href="/flywheel.html">The Flywheel</a>
-        <a href="/products.html">Products</a>
-        <a href="/model.html">The Model</a>
-        <a href="/trust.html">Trust</a>
-        <a href="/about.html">Team</a>
-        <a href="/blog/" class="active">Blog</a>
+        <a href="{{ '/index.html' | relative_url }}">Overview</a>
+        <a href="{{ '/flywheel.html' | relative_url }}">The Flywheel</a>
+        <a href="{{ '/products.html' | relative_url }}">Products</a>
+        <a href="{{ '/model.html' | relative_url }}">The Model</a>
+        <a href="{{ '/trust.html' | relative_url }}">Trust</a>
+        <a href="{{ '/about.html' | relative_url }}">Team</a>
+        <a href="{{ '/blog/' | relative_url }}" class="active">Blog</a>
         <button id="theme-toggle" class="theme-toggle">
           <span id="theme-icon">☀️</span>
           <span id="theme-text">Light Mode</span>
@@ -50,6 +50,6 @@
     </p>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="{{ '/script.js' | relative_url }}"></script>
 </body>
 </html>

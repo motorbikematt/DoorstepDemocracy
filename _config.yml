@@ -1,6 +1,7 @@
 title: Field Notes | The Doorstep Democracy Blog
 description: Insights, engineering deep-dives, and updates from the team building Precincts.info.
-url: "https://doorstepdemocracy.com"
+url: "https://motorbikematt.github.io"
+baseurl: "/DoorstepDemocracy"
 permalink: /blog/:year/:month/:day/:title/
 exclude:
   - local/
