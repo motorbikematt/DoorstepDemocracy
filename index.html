@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Doorstep Democracy Benefit Company | Grassroots Organizing Infrastructure</title>
-  <meta name="description" content="We build agentic, data-driven organizing infrastructure for the last mile of American democracy. Creators of Precincts.info and the compounding Field Notes Database.">
+  <title>Precincts.info | Premium Civic Infrastructure for Ohio</title>
+  <meta name="description" content="Agentic organizing infrastructure for the last mile of American democracy. Powering local party captains with open data and geospatial routing.">
+  <link rel="canonical" href="https://doorstepdemocracy.com/">
+  <meta property="og:title" content="Precincts.info | Premium Civic Infrastructure for Ohio">
+  <meta property="og:description" content="Agentic organizing infrastructure for the last mile of American democracy. Powering local party captains with open data and geospatial routing.">
+  <meta property="og:url" content="https://doorstepdemocracy.com/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,7 +18,9 @@
 </head>
 <body class="page-home">
   <!-- Dynamic Background Map Container -->
-  <div id="bg-map-container"></div>
+  <div id="bg-map-container">
+    <!-- SVG would be here but typically populated or styled by JS/CSS; retaining container as requested -->
+  </div>
 
   <header>
     <nav>
@@ -21,7 +29,10 @@
         <a href="index.html" class="active">Overview</a>
         <a href="flywheel.html">The Flywheel</a>
         <a href="products.html">Products</a>
+        <a href="model.html">The Model</a>
+        <a href="trust.html">Trust</a>
         <a href="about.html">Team</a>
+        <a href="/blog/">Blog</a>
         <button id="theme-toggle" class="theme-toggle">
           <span id="theme-icon">☀️</span>
           <span id="theme-text">Light Mode</span>
@@ -32,24 +43,43 @@
 
   <main class="container">
     <section class="hero">
-      <h1>Building agentic organizing infrastructure for the last mile of American democracy.</h1>
-      <p>We solve the volunteer bottleneck. Trust is our product. Verifiability is our standard.</p>
-      <a href="flywheel.html" class="btn">Explore the Architecture</a>
+      <h1>Every door knock makes the next one easier. Organize your precinct with intelligent infrastructure.</h1>
+      <p>The bottleneck in grassroots organizing isn't voter apathy—it's volunteer friction. Precincts.info is the modern operating system for local party precinct captains and ward leaders, turning isolated volunteers into confident, data-driven organizers. Built for the reality of the last mile.</p>
+      
+      <div style="margin-bottom: 2rem;">
+        <a href="products.html" class="btn" style="margin-right: 1rem;">Request a demo for your county party</a>
+        <a href="model.html" class="btn">Read the investor brief</a>
+      </div>
+      
+      <figure data-slot="home-hero-mockup" style="margin-top: 3rem; background: var(--surface-glass); border: 1px solid var(--border-color); border-radius: 12px; height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <!-- Phase 3 image goes here -->
+        <p style="color: var(--text-secondary);">[Product Dashboard Mockup Placeholder]</p>
+      </figure>
     </section>
 
-    <section class="card">
-      <h2>The Core Problem</h2>
-      <p>The grassroots organizing bottleneck is the precinct captain—an elected community volunteer operating blind, isolated, and without modern support. They face high friction tools, a blank page problem without localized context, and outdated, expensive software like NGP VAN that isolates canvassers rather than uniting them.</p>
-    </section>
+    <div class="card-grid">
+      <section class="card">
+        <h2>The Scale of Our Data</h2>
+        <ul style="list-style: none; color: var(--text-secondary); line-height: 2;">
+          <li><strong>88 Counties Processed</strong> (using public Ohio SOS data)</li>
+          <li><strong>26 Years of Election History</strong> (2000–2026 public SOS records)</li>
+          <li><strong>209 Verified Montgomery County Precinct Seats</strong> (an expanding operational baseline out of 381 possible precincts)</li>
+        </ul>
+      </section>
 
-    <section class="card">
-      <h2>Our Approach</h2>
-      <p>We build tools that empower organizers through deterministic cohort segmentation, localized AI-driven briefings, and mobile-first geospatial routing. We shift the initial unit of work from persuading hostile voters to recruiting safe allies and building local networks.</p>
-    </section>
+      <section class="card">
+        <h2>The Problem vs. The Solution</h2>
+        <p>For too long, local organizers have relied on expensive, outdated tools that provide no localized context. Our architecture is built around a compounding Field Notes Database. Every conversation feeds back into the system, training our models to provide sharper, more relevant briefings for your entire network.</p>
+      </section>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2026 The Doorstep Democracy Benefit Company. An Ohio Benefit Corporation.</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="mailto:contact@doorstepdemocracy.com" style="color: var(--text-secondary);">contact@doorstepdemocracy.com</a> | 
+      <a href="https://www.linkedin.com/in/motorbikematt" style="color: var(--text-secondary);" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
   </footer>
 
   <script src="script.js"></script>

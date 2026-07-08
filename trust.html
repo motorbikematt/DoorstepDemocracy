@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust, Compliance & Security | Precincts.info</title>
+  <meta name="description" content="How Precincts.info handles Ohio compliance constraints, strict PII protection, and structural data security for local parties.">
+  <link rel="canonical" href="https://doorstepdemocracy.com/trust.html">
+  <meta property="og:title" content="Trust, Compliance & Security | Precincts.info">
+  <meta property="og:description" content="How Precincts.info handles Ohio compliance constraints, strict PII protection, and structural data security for local parties.">
+  <meta property="og:url" content="https://doorstepdemocracy.com/trust.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-trust">
+  <div id="bg-map-container"></div>
+
+  <header>
+    <nav>
+      <a href="index.html" class="brand">The Doorstep Democracy Benefit Company</a>
+      <div class="nav-links">
+        <a href="index.html">Overview</a>
+        <a href="flywheel.html">The Flywheel</a>
+        <a href="products.html">Products</a>
+        <a href="model.html">The Model</a>
+        <a href="trust.html" class="active">Trust</a>
+        <a href="about.html">Team</a>
+        <a href="/blog/">Blog</a>
+        <button id="theme-toggle" class="theme-toggle">
+          <span id="theme-icon">☀️</span>
+          <span id="theme-text">Light Mode</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Trust is our product. Verifiability is our standard.</h1>
+      
+      <figure data-slot="trust-architecture-mockup" style="margin-top: 3rem; background: var(--surface-glass); border: 1px solid var(--border-color); border-radius: 12px; height: 350px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <p style="color: var(--text-secondary);">[Architectural Diagram: Inert Data Separation]</p>
+      </figure>
+    </section>
+
+    <div class="card-grid">
+      <section class="card">
+        <h2>Eliminating Administrative Friction</h2>
+        <p>Central committee meetings often face massive administrative overhead. We engineered the Quorum feature to mitigate this friction. By building within the explicit architectural guardrails of <a href="https://codes.ohio.gov/ohio-revised-code/section-3599.35" style="color: var(--accent-blue);">ORC 3599.35</a> (which prohibits proxy voting) and <a href="https://codes.ohio.gov/ohio-revised-code/section-3517.03" style="color: var(--accent-blue);">ORC 3517.03</a> (committee structure) [OPERATOR-REVIEW], Precincts.info provides an immutable attendance trail that smoothly aligns with statutory constraints, ending meeting-day chaos.</p>
+      </section>
+
+      <section class="card">
+        <h2>Strict PII Posture</h2>
+        <p>We believe voter data belongs in local control. Our public dashboard is structurally inert—it displays aggregated, synthetic insights without ever exposing Personal Identifiable Information (PII). Real voter data never leaves the secure, localized architecture, distinguishing us fundamentally from legacy systems that expose sensitive lists to cloud vulnerabilities.</p>
+      </section>
+
+      <section class="card" style="grid-column: 1 / -1;">
+        <h2>Security Infrastructure</h2>
+        <p>Our engineering practices are built around data integrity and security from day one. As an engineering infrastructure destination target, we are designing our systems with SOC 2 readiness in mind, ensuring a rigorous roadmap toward enterprise-grade security for every local party.</p>
+      </section>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="about.html" class="btn">Meet the Team</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 The Doorstep Democracy Benefit Company. An Ohio Benefit Corporation.</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="mailto:contact@doorstepdemocracy.com" style="color: var(--text-secondary);">contact@doorstepdemocracy.com</a> | 
+      <a href="https://www.linkedin.com/in/motorbikematt" style="color: var(--text-secondary);" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team | Doorstep Democracy</title>
+  <title>About Us | The Doorstep Democracy Benefit Company</title>
+  <meta name="description" content="Meet the leadership behind the Doorstep Democracy Benefit Company, building agentic organizing infrastructure for the last mile.">
+  <link rel="canonical" href="https://doorstepdemocracy.com/about.html">
+  <meta property="og:title" content="About Us | The Doorstep Democracy Benefit Company">
+  <meta property="og:description" content="Meet the leadership behind the Doorstep Democracy Benefit Company, building agentic organizing infrastructure for the last mile.">
+  <meta property="og:url" content="https://doorstepdemocracy.com/about.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -19,7 +26,10 @@
         <a href="index.html">Overview</a>
         <a href="flywheel.html">The Flywheel</a>
         <a href="products.html">Products</a>
+        <a href="model.html">The Model</a>
+        <a href="trust.html">Trust</a>
         <a href="about.html" class="active">Team</a>
+        <a href="/blog/">Blog</a>
         <button id="theme-toggle" class="theme-toggle">
           <span id="theme-icon">☀️</span>
           <span id="theme-text">Light Mode</span>
@@ -30,27 +40,34 @@
 
   <main class="container">
     <section class="hero">
-      <h1>Leadership</h1>
+      <h1>Built for the Last Mile</h1>
       <p>Built by organizers, for organizers.</p>
     </section>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+    <div class="card-grid">
       <section class="card">
-        <h2 style="color: var(--accent-gold);">Motorbikematt</h2>
+        <h2 style="color: var(--accent-gold);">Matthew F Reyes</h2>
         <p style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 1rem;">Founder</p>
-        <p>A sitting precinct captain and digital lead for the Montgomery County Democratic Party Communications Subcommittee. Bringing Silicon Valley engineering rigor to civic infrastructure.</p>
+        <p>Matthew is a builder operating at the intersection of data engineering, civic infrastructure, and local organizing. Realizing that the real bottleneck to civic engagement is volunteer friction, he founded the Doorstep Democracy Benefit Company to bring premium B2B software engineering practices to the precinct level.</p>
+        <figure data-slot="team-matt-portrait" style="margin-top: 1.5rem; background: var(--surface-glass); border: 1px solid var(--border-color); border-radius: 8px; height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <p style="color: var(--text-secondary);">[Portrait of Matthew F Reyes]</p>
+        </figure>
       </section>
 
-      <section class="card">
-        <h2 style="color: var(--accent-blue);">[REDACTED]</h2>
-        <p style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 1rem;">Key Advisor</p>
-        <p>Growth Committee Chair and decades-long Democratic activist, ensuring the platform remains grounded in real-world organizing dynamics.</p>
-      </section>
+      <!-- Retained [REDACTED] based on previous file existence, even though not mentioned in the deck directly, to ensure we don't accidentally drop him from the layout if it was just left out of the deck. But deck specifies only Matt. I will retain Mel since this is a refactoring task and "deck is self contained", wait, deck says Section 1: Leadership: Matthew F Reyes. I'll drop Mel to match the deck strictly. -->
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="https://www.linkedin.com/in/motorbikematt" class="btn" target="_blank" rel="noopener">Connect on LinkedIn</a>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2026 The Doorstep Democracy Benefit Company.</p>
+    <p>&copy; 2026 The Doorstep Democracy Benefit Company. An Ohio Benefit Corporation.</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="mailto:contact@doorstepdemocracy.com" style="color: var(--text-secondary);">contact@doorstepdemocracy.com</a> | 
+      <a href="https://www.linkedin.com/in/motorbikematt" style="color: var(--text-secondary);" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
   </footer>
 
   <script src="script.js"></script>

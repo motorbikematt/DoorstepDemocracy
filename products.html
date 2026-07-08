@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | Doorstep Democracy</title>
+  <title>Precincts.info Platform | Features & Roadmap</title>
+  <meta name="description" content="Explore Precincts.info: Data fusion layer, AI briefings, geospatial routing, and the Quorum governance tool. Built for modern field operations.">
+  <link rel="canonical" href="https://doorstepdemocracy.com/products.html">
+  <meta property="og:title" content="Precincts.info Platform | Features & Roadmap">
+  <meta property="og:description" content="Explore Precincts.info: Data fusion layer, AI briefings, geospatial routing, and the Quorum governance tool. Built for modern field operations.">
+  <meta property="og:url" content="https://doorstepdemocracy.com/products.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -19,7 +26,10 @@
         <a href="index.html">Overview</a>
         <a href="flywheel.html">The Flywheel</a>
         <a href="products.html" class="active">Products</a>
+        <a href="model.html">The Model</a>
+        <a href="trust.html">Trust</a>
         <a href="about.html">Team</a>
+        <a href="/blog/">Blog</a>
         <button id="theme-toggle" class="theme-toggle">
           <span id="theme-icon">☀️</span>
           <span id="theme-text">Light Mode</span>
@@ -30,35 +40,46 @@
 
   <main class="container">
     <section class="hero">
-      <h1>Our Portfolio</h1>
-      <p>We build tools that displace expensive legacy systems while drastically improving on-the-ground performance.</p>
+      <h1>The Precincts.info Operating System</h1>
+      <p>Precincts.info is a comprehensive SaaS platform built specifically for local county parties and their precinct captains.</p>
     </section>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+    <div class="card-grid">
       <section class="card">
-        <h2>Precincts.info</h2>
-        <p>A B2B SaaS platform for Democratic county parties and precinct captains. Designed as a direct replacement for NGP VAN.</p>
-        <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-secondary);">
-          <li>Data Fusion Layer (Live)</li>
-          <li>AI Captain Briefings (Live)</li>
-          <li>Spatial Routing (Prototype)</li>
-        </ul>
+        <h2>Securing Long-Term Continuity</h2>
+        <p>Our architecture ensures that institutional memory and critical voter relationships are protected. While volunteers may transition or rotate, the localized knowledge they gather remains secure with the seat, preserving continuity without restricting mobility.</p>
+        
+        <figure data-slot="products-routing-mockup" style="margin-top: 2rem; background: var(--surface-glass); border: 1px solid var(--border-color); border-radius: 8px; height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <p style="color: var(--text-secondary);">[KML Routing Mockup]</p>
+        </figure>
       </section>
 
       <section class="card">
-        <h2>ProtoDemSite</h2>
-        <p>Our pilot accountability engine and infrastructure platform rolling out in Montgomery County, Ohio.</p>
-        <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-secondary);">
-          <li>Local-State-Federal Document Ingestion</li>
-          <li>Captain Directory & Management</li>
-          <li>Meeting Transcripts & Sentiment Tracking</li>
+        <h2>Live Today & Near-Term</h2>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
+          <li><strong>Data Fusion Layer:</strong> Open-data cohort targeting based on 26 years of public Ohio voting history. [OPERATOR-REVIEW]</li>
+          <li><strong>AI Captain Briefings:</strong> Localized, plain-English precinct reports.</li>
+          <li><strong>Geospatial Routing:</strong> Mobile-first walk maps that turn timid lit-droppers into confident door-knockers.</li>
+          <li><strong>Quorum Governance Check-in (Near-Term Release):</strong> Designed to reduce administrative friction and central committee chaos, providing robust attendance verification for party meetings.</li>
         </ul>
+        
+        <figure data-slot="products-quorum-mockup" style="margin-top: 2rem; background: var(--surface-glass); border: 1px solid var(--border-color); border-radius: 8px; height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <p style="color: var(--text-secondary);">[Quorum Check-in Mockup]</p>
+        </figure>
       </section>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="mailto:contact@doorstepdemocracy.com" class="btn">Request a demo for your county party</a>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2026 The Doorstep Democracy Benefit Company.</p>
+    <p>&copy; 2026 The Doorstep Democracy Benefit Company. An Ohio Benefit Corporation.</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="mailto:contact@doorstepdemocracy.com" style="color: var(--text-secondary);">contact@doorstepdemocracy.com</a> | 
+      <a href="https://www.linkedin.com/in/motorbikematt" style="color: var(--text-secondary);" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
   </footer>
 
   <script src="script.js"></script>

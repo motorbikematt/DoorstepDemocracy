@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         node3.classList.add('active');
         break;
       case 6:
-        // Sharper Briefings & Compounding Trust: The full infinity loop is glowing.
+        // Sharper Briefings & Compounding Trust
         loopLeft.classList.add('active');
         bedrock.classList.add('active');
         loopRight.classList.add('active');
@@ -59,6 +59,17 @@ document.addEventListener('DOMContentLoaded', () => {
         node2.classList.add('active');
         node3.classList.add('active');
         node4.classList.add('active');
+        break;
+      case 7:
+        // Winning Elections: The full system glows.
+        loopLeft.classList.add('active');
+        bedrock.classList.add('active');
+        loopRight.classList.add('active');
+        node1.classList.add('active');
+        node2.classList.add('active');
+        node3.classList.add('active');
+        node4.classList.add('active');
+        // Extra effect can be applied via CSS if needed
         break;
       default:
         break;
