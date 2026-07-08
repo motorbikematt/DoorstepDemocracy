@@ -1,0 +1,10 @@
+title: Field Notes | The Doorstep Democracy Blog
+description: Insights, engineering deep-dives, and updates from the team building Precincts.info.
+url: "https://doorstepdemocracy.com"
+permalink: /blog/:year/:month/:day/:title/
+exclude:
+  - local/
+  - node_modules/
+  - .claude/
+  - CLAUDE.md
+  - AGENTS.md

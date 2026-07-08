@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="page-blog">
+  <div id="bg-map-container"></div>
+
+  <header>
+    <nav>
+      <a href="/index.html" class="brand">The Doorstep Democracy Benefit Company</a>
+      <div class="nav-links">
+        <a href="/index.html">Overview</a>
+        <a href="/flywheel.html">The Flywheel</a>
+        <a href="/products.html">Products</a>
+        <a href="/model.html">The Model</a>
+        <a href="/trust.html">Trust</a>
+        <a href="/about.html">Team</a>
+        <a href="/blog/" class="active">Blog</a>
+        <button id="theme-toggle" class="theme-toggle">
+          <span id="theme-icon">☀️</span>
+          <span id="theme-text">Light Mode</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>&copy; 2026 The Doorstep Democracy Benefit Company. An Ohio Benefit Corporation.</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="mailto:contact@doorstepdemocracy.com" style="color: var(--text-secondary);">contact@doorstepdemocracy.com</a> | 
+      <a href="https://www.linkedin.com/in/motorbikematt" style="color: var(--text-secondary);" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

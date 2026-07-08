@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="post">
+  <header style="margin-bottom: 3rem; text-align: center;">
+    <h1 style="margin-bottom: 1rem;">{{ page.title }}</h1>
+    <p style="color: var(--text-secondary);">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %d, %Y" }}
+      </time>
+    </p>
+  </header>
+
+  <div class="post-content" style="font-size: 1.1rem; line-height: 1.8;">
+    {{ content }}
+  </div>
+</article>
