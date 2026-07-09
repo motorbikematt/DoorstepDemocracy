@@ -10,12 +10,16 @@ description: War stories, engineering insights, and data analysis from building 
 </section>
 
 <div class="card-grid">
-  {% for post in site.posts %}
-  <section class="card">
-    <h2 style="font-size: 1.5rem;"><a href="{{ post.url | relative_url }}" style="color: var(--text-primary); text-decoration: none;">{{ post.title }}</a></h2>
-    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ post.date | date: "%B %d, %Y" }}</p>
-    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-    <a href="{{ post.url | relative_url }}" style="color: var(--accent-blue); text-decoration: none; font-weight: 500; display: inline-block; margin-top: 1rem;">Read more →</a>
-  </section>
-  {% endfor %}
+  {% if site.posts.size > 0 %}
+    {% for post in site.posts %}
+    <section class="card">
+      <h2 style="font-size: 1.5rem;"><a href="{{ post.url | relative_url }}" style="color: var(--text-primary); text-decoration: none;">{{ post.title }}</a></h2>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ post.date | date: "%B %d, %Y" }}</p>
+      <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      <a href="{{ post.url | relative_url }}" style="color: var(--accent-blue); text-decoration: none; font-weight: 500; display: inline-block; margin-top: 1rem;">Read more →</a>
+    </section>
+    {% endfor %}
+  {% else %}
+    <p style="color: var(--text-secondary); grid-column: 1 / -1; text-align: center; padding: 2rem;">First posts coming soon.</p>
+  {% endif %}
 </div>

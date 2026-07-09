@@ -259,3 +259,5 @@ footer {
     font-size: 1.1rem;
   }
 }
+
+figure[data-slot]:empty { display: none !important; }
